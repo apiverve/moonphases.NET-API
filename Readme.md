@@ -70,19 +70,20 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new QueryOptions {
-  date = "05-13-2024"
+var queryOptions = new moonphasesQueryOptions {
+  date = "05-14-2024"
 };
 ```
 
 ###### Simple Request
 
 ```
-var response = apiClient.execute(queryOptions);
+var response = apiClient.Execute(queryOptions);
 if(response.error != null) {
 	Console.WriteLine(response.error);
 } else {
-    Console.WriteLine(response);
+    var jsonResponse = JsonConvert.SerializeObject(response.data, Newtonsoft.Json.Formatting.Indented);
+    Console.WriteLine(jsonResponse);
 }
 ```
 
