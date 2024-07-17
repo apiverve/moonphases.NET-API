@@ -5,7 +5,6 @@ using System.Text;
 namespace APIVerve
 {
     public class moonphasesQueryOptions {
-public string date { get; set; }
 }
 
 }
