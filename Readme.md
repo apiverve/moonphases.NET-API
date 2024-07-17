@@ -70,15 +70,13 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new moonphasesQueryOptions {
-  date = "05-15-2024"
-};
+This API does not require a Query
 ```
 
 ###### Simple Request
 
 ```
-var response = apiClient.Execute(queryOptions);
+var response = apiClient.Execute();
 if(response.error != null) {
 	Console.WriteLine(response.error);
 } else {
@@ -94,16 +92,16 @@ if(response.error != null) {
   "status": "ok",
   "error": null,
   "data": {
-    "phase": "First Quarter",
-    "phaseEmoji": "🌓",
+    "phase": "Waxing Gibbous",
+    "phaseEmoji": "🌔",
     "waxing": true,
     "waning": false,
-    "lunarAge": 7.6931005661480931,
-    "lunarAgePercent": 0.26051295161482813,
-    "lunationNumber": 1254,
-    "lunarDistance": 63.3482661665232,
-    "nextFullMoon": "2024-06-15T00:00:00Z",
-    "lastFullMoon": "2024-04-16T00:00:00Z"
+    "lunarAge": 11.631925154626766,
+    "lunarAgePercent": 0.39389413006358609,
+    "lunationNumber": 1256,
+    "lunarDistance": 60.524038551213266,
+    "nextFullMoon": "2024-08-17T00:00:00Z",
+    "lastFullMoon": "2024-06-18T00:00:00Z"
   }
 }
 ```
