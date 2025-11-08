@@ -4,54 +4,55 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("phase")]
-    public string phase { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("phase")]
+        public string Phase { get; set; }
 
-    [JsonProperty("phaseEmoji")]
-    public string phaseEmoji { get; set; }
+        [JsonProperty("phaseEmoji")]
+        public string PhaseEmoji { get; set; }
 
-    [JsonProperty("waxing")]
-    public bool waxing { get; set; }
+        [JsonProperty("waxing")]
+        public bool Waxing { get; set; }
 
-    [JsonProperty("waning")]
-    public bool waning { get; set; }
+        [JsonProperty("waning")]
+        public bool Waning { get; set; }
 
-    [JsonProperty("lunarAge")]
-    public double lunarAge { get; set; }
+        [JsonProperty("lunarAge")]
+        public double LunarAge { get; set; }
 
-    [JsonProperty("lunarAgePercent")]
-    public double lunarAgePercent { get; set; }
+        [JsonProperty("lunarAgePercent")]
+        public double LunarAgePercent { get; set; }
 
-    [JsonProperty("lunationNumber")]
-    public int lunationNumber { get; set; }
+        [JsonProperty("lunationNumber")]
+        public int LunationNumber { get; set; }
 
-    [JsonProperty("lunarDistance")]
-    public double lunarDistance { get; set; }
+        [JsonProperty("lunarDistance")]
+        public double LunarDistance { get; set; }
 
-    [JsonProperty("nextFullMoon")]
-    public DateTime nextFullMoon { get; set; }
+        [JsonProperty("nextFullMoon")]
+        public string NextFullMoon { get; set; }
 
-    [JsonProperty("lastFullMoon")]
-    public DateTime lastFullMoon { get; set; }
+        [JsonProperty("lastFullMoon")]
+        public string LastFullMoon { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
